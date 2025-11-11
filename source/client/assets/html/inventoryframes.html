@@ -1,0 +1,81 @@
+<inventoryframes>
+    <div class="js-inventory-wrapper inventory-wrapper">
+        <div class="background-wrap js-background-wrap">
+            <div class="background-top js-background-top"></div>
+            <div class="background-middle js-background-middle"></div>
+            <div class="background-bottom js-background-bottom"></div>
+        </div>
+        <div class="inventory-items-item js-inventory-items-item inventory-items-item-dummy js-inventory-items-item-dummy ">
+            <div class="item-frame js-item-frame" data-rarity=""></div>
+            <div class="item-icon js-item-icon"><div class="item-amount js-item-amount"></div></div>
+            <div class="item-additional-data js-item-additional-data popover">
+                <div class="background-wrap js-background-wrap background-wrap-popover-simple js-background-wrap-popover-simple">
+                    <div class="background-area"></div>
+                    <div class="background-top-border js-background-top-border background-border-horizontal js-background-border-horizontal"></div>
+                    <div class="background-bottom-border js-background-bottom-border background-border-horizontal js-background-border-horizontal"></div>
+                    <div class="background-left-border js-background-left-border background-border-vertical js-background-border-vertical"></div>
+                    <div class="background-right-border js-background-right-border background-border-vertical js-background-border-vertical"></div>
+                </div>
+                <div class="close-btn js-close-btn">X</div>
+                <div class="item-name js-item-name text-heading text-with-bg"></div>
+                <div class="item-description js-item-description text-regular text-with-bg"></div>
+                <div class="item-actions js-item-actions">
+                    <button class="item-action-use js-item-action-use button-main">
+                        <span class="button-bg js-button-bg"></span>
+                        <span class="button-text js-button-text"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="js-inventory-items-categories-selection inventory-items-categories-selection">
+            <div class="select-category js-select-category" data-category-type="resource"></div>
+            <div class="select-category js-select-category" data-category-type="elixir"></div>
+            <div class="select-category js-select-category" data-category-type="recipe"></div>
+            <div class="select-category js-select-category" data-category-type="misc"></div>
+        </div>
+        <div class="inventory-items js-inventory-items">
+            <div class="inventory-items-category js-inventory-items-category" data-category-type="resource"></div>
+            <div class="inventory-items-category js-inventory-items-category" data-category-type="elixir"></div>
+            <div class="inventory-items-category js-inventory-items-category" data-category-type="recipe"></div>
+            <div class="inventory-items-category js-inventory-items-category" data-category-type="misc"></div>
+        </div>
+    </div>
+    <div class="js-inventory-modal-wrapper inventory-modal-wrapper modal-default-wrapper">
+        <div class="inventory-modal js-inventory-modal modal-default">
+            <div class="background-wrap js-background-wrap background-wrap-modal js-background-wrap-modal">
+                <div class="background-area"></div>
+                <div class="background-top-border js-background-top-border background-border-horizontal js-background-border-horizontal"></div>
+                <div class="background-bottom-border js-background-bottom-border background-border-horizontal js-background-border-horizontal"></div>
+                <div class="background-left-border js-background-left-border background-border-vertical js-background-border-vertical"></div>
+                <div class="background-right-border js-background-right-border background-border-vertical js-background-border-vertical"></div>
+            </div>
+            <div class="modal-close-btn js-modal-close-btn close-btn js-close-btn">X</div>
+            <div class="modal-content">
+                <div class="inventory-modal-item">
+                    <div class="item-icon-wrap">
+                        <div class="item-frame js-item-frame" data-rarity=""></div>
+                        <div class="item-icon js-item-icon"></div>
+                    </div>
+                    <div class="item-additional-data js-item-additional-data">
+                        <div class="item-name js-item-name text-heading text-with-bg"></div>
+                        <div class="item-edit-quantity">
+                            <div class="item-quantity js-item-quantity">
+                                <input class="item-quantity-input js-item-quantity-input input-default" type="number" min="1" max="99" value="1" />
+                            </div>
+                        </div>
+                        <div class="item-actions js-item-actions">
+                            <button class="item-action-reject js-item-action-reject button-main">
+                                <span class="button-bg js-button-bg"></span>
+                                <span class="button-text js-button-text"></span>
+                            </button>
+                            <button class="item-action-use js-item-action-use button-main">
+                                <span class="button-bg js-button-bg"></span>
+                                <span class="button-text js-button-text"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</inventoryframes>

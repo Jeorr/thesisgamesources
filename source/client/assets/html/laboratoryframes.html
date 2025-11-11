@@ -1,0 +1,122 @@
+<laboratoryframes>
+    <div class="js-laboratory-wrapper laboratory-wrapper">
+        <div class="laboratory-recipe-items-wrap js-laboratory-recipe-items-wrap">
+            <div class="background-wrap js-background-wrap">
+                <div class="background-top js-background-top"></div>
+                <div class="background-middle js-background-middle"></div>
+                <div class="background-bottom js-background-bottom"></div>
+            </div>
+            <div class="laboratory-items-item js-laboratory-items-item laboratory-items-item-dummy js-laboratory-items-item-dummy ">
+                <div class="item-frame js-item-frame" data-rarity=""></div>
+                <div class="item-icon js-item-icon"><div class="item-amount js-item-amount"></div></div>
+                <div class="item-additional-data js-item-additional-data popover">
+                    <div class="background-wrap js-background-wrap background-wrap-popover-simple js-background-wrap-popover-simple">
+                        <div class="background-area"></div>
+                        <div class="background-top-border js-background-top-border background-border-horizontal js-background-border-horizontal"></div>
+                        <div class="background-bottom-border js-background-bottom-border background-border-horizontal js-background-border-horizontal"></div>
+                        <div class="background-left-border js-background-left-border background-border-vertical js-background-border-vertical"></div>
+                        <div class="background-right-border js-background-right-border background-border-vertical js-background-border-vertical"></div>
+                    </div>
+                    <div class="close-btn js-close-btn">X</div>
+                    <div class="item-cost js-item-cost">
+                        <div class="item-cost-currency-wrap">
+                            <div class="currency-icon" data-currency="currency1"></div>
+                            <div class="item-cost-currency js-item-cost-currency" data-currency="currency1"></div>
+                        </div>
+                        <div class="item-cost-currency-wrap">
+                            <div class="currency-icon" data-currency="currency2"></div>
+                            <div class="item-cost-currency js-item-cost-currency" data-currency="currency2"></div>
+                        </div>
+                    </div>
+                    <div class="item-name js-item-name text-heading text-with-bg"></div>
+                    <div class="item-description js-item-description text-regular text-with-bg"></div>
+                    <div class="divider divider-horizontal-simple"></div>
+                    <div class="item-ingredients js-item-ingredients">
+                        <div class="item-ingredients-title js-item-ingredients-title text-heading"></div>
+                        <div class="item-ingredients-item js-item-ingredients-item item-ingredients-item-dummy js-item-ingredients-item-dummy ">
+                            <div class="item-ingredients-item-frame js-item-ingredients-item-frame item-frame" data-rarity=""></div>
+                            <div class="item-ingredients-item-icon js-item-ingredients-item-icon item-icon">
+                                <div class="item-ingredients-item-amount js-item-ingredients-item-amount item-amount">
+                                    <span class="needed js-needed"></span>/<span class="exist js-exists"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-actions js-item-actions">
+                        <button class="item-action-create js-item-action-create button-main">
+                            <span class="button-bg js-button-bg"></span>
+                            <span class="button-text js-button-text"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="js-laboratory-items-categories-selection laboratory-items-categories-selection">
+                <div class="select-category js-select-category" data-category-type="elixir"></div>
+                <div class="select-category js-select-category" data-category-type="resource"></div>
+            </div>
+            <div class="laboratory-items js-laboratory-items">
+                <div class="laboratory-items-category js-laboratory-items-category" data-category-type="elixir"></div>
+                <div class="laboratory-items-category js-laboratory-items-category" data-category-type="resource"></div>
+            </div>
+        </div>
+    </div>
+    <div class="js-laboratory-modal-wrapper laboratory-modal-wrapper modal-default-wrapper">
+        <div class="laboratory-modal js-laboratory-modal modal-default laboratory-modal-dummy js-laboratory-modal-dummy">
+            <div class="background-wrap js-background-wrap background-wrap-modal js-background-wrap-modal">
+                <div class="background-area"></div>
+                <div class="background-top-border js-background-top-border background-border-horizontal js-background-border-horizontal"></div>
+                <div class="background-bottom-border js-background-bottom-border background-border-horizontal js-background-border-horizontal"></div>
+                <div class="background-left-border js-background-left-border background-border-vertical js-background-border-vertical"></div>
+                <div class="background-right-border js-background-right-border background-border-vertical js-background-border-vertical"></div>
+            </div>
+            <div class="modal-close-btn js-modal-close-btn close-btn js-close-btn">X</div>
+            <div class="modal-content">
+                <div class="laboratory-modal-item">
+                    <div class="item-icon-wrap">
+                        <div class="item-frame js-item-frame" data-rarity=""></div>
+                        <div class="item-icon js-item-icon"></div>
+                    </div>
+                    <div class="item-additional-data js-item-additional-data">
+                        <div class="item-name js-item-name text-heading text-with-bg"></div>
+                        <div class="item-edit-quantity">
+                            <div class="item-cost js-item-cost">
+                                <div class="item-cost-currency-wrap text-regular text-with-bg">
+                                    <div class="currency-icon" data-currency="currency1"></div>
+                                    <div class="item-cost-currency js-item-cost-currency" data-currency="currency1"></div>
+                                </div>
+                                <div class="item-cost-currency-wrap text-regular text-with-bg">
+                                    <div class="currency-icon" data-currency="currency2"></div>
+                                    <div class="item-cost-currency js-item-cost-currency" data-currency="currency2"></div>
+                                </div>
+                            </div>
+                            <div class="item-quantity js-item-quantity">
+                                <input class="item-quantity-input js-item-quantity-input input-default" type="number" min="1" max="99" value="1" />
+                            </div>
+                        </div>
+                        <div class="item-ingredients js-item-ingredients">
+                            <div class="item-ingredients-title js-item-ingredients-title text-heading"></div>
+                            <div class="item-ingredients-item js-item-ingredients-item item-ingredients-item-dummy js-item-ingredients-item-dummy ">
+                                <div class="item-ingredients-item-frame js-item-ingredients-item-frame item-frame" data-rarity=""></div>
+                                <div class="item-ingredients-item-icon js-item-ingredients-item-icon item-icon">
+                                    <div class="item-ingredients-item-amount js-item-ingredients-item-amount item-amount" data-needed-per-item="">
+                                        <span class="needed js-needed"></span>/<span class="exist js-exists"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-actions js-item-actions">
+                            <button class="item-action-reject js-item-action-reject button-main">
+                                <span class="button-bg js-button-bg"></span>
+                                <span class="button-text js-button-text"></span>
+                            </button>
+                            <button class="item-action-create js-item-action-create button-main">
+                                <span class="button-bg js-button-bg"></span>
+                                <span class="button-text js-button-text"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</laboratoryframes>

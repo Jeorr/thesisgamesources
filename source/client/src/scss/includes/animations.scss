@@ -1,0 +1,28 @@
+.cornerplant-animated {
+  width: 349px;
+  height: 481px;
+  background-image: url('/client/assets/objects/shopcornerplant/shopcornerplant.png');
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: cornerplant-default 800ms steps(3) infinite;
+  transition: none;
+}
+
+@keyframes cornerplant-default {
+  from { background-position: 0 -481px; }
+  to   { background-position: -1047px -481px; }
+}
+
+.cornerplant1-animated {
+  width: 181px;
+  height: 214px;
+  background-image: url('/client/assets/objects/cornerplant1/cornerplant1.png');
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: cornerplant1-default 1200ms steps(7) infinite;
+}
+
+@keyframes cornerplant1-default {
+  from { background-position: 0 0; }
+  to   { background-position: -1267px 0; }
+}

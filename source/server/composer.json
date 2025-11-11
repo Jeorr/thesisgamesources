@@ -1,0 +1,32 @@
+{
+    "name": "jidexstudio/petmaster2",
+	"description" : "PetMaster 2",
+	"license": "GPL-2.0-or-later",
+	"config": {
+		"platform": {
+			"php": "8.0"
+		},
+		"sort-packages": true,
+        "allow-plugins": {
+            "typo3/class-alias-loader": false,
+            "typo3/cms-composer-installers": false
+        }
+	},
+    "require": {
+        "cboden/ratchet": "^0.4.4",
+        "khr/react-curl": "*",
+        "monolog/monolog": "^2.9",
+        "react/event-loop": "^1.2",
+        "react/http": "^1.5",
+        "react/mysql": "^0.5.6",
+        "symfony/event-dispatcher": "^5.4",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "scripts":{
+	},
+    "autoload": {
+        "psr-4": {
+            "Server\\": "src"
+        }
+    }
+}

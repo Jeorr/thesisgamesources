@@ -1,0 +1,74 @@
+@import './colors';
+@import './backgrounds';
+
+@font-face {
+  font-family: 'PixelUppercase';
+  src: url('/client/assets/fonts/arcadeclassic/font.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'PixelLowercase';
+  src: url('/client/assets/fonts/dpcomic/font.ttf')  format('truetype');
+}
+
+$font-heading: 'PixelUppercase', sans-serif;
+$font-regular: 'PixelLowercase', sans-serif;
+$font-size-medium: 16px;
+$font-size-big: 20px;
+$font-size-xl: 24px;
+
+.text-regular {
+  text-shadow: 2px 2px 2px #000;
+  color: $font-color-text-regular;;
+  font-family: $font-regular;
+  line-height: 1.5;
+}
+
+.text-heading {
+  text-shadow: 2px 2px 2px #000;
+  color: $font-color-text-regular;
+  font-family: $font-heading;
+  line-height: 1.5;
+}
+
+.text-regular,
+.text-heading,
+flashmessage .message-body span {
+  &[data-rarity='common'] {
+    color: $font-color-text-regular;
+  }
+  &[data-rarity='good'] {
+    color: $font-color-text-rarity-good
+  }
+  &[data-rarity='rare'] {
+    color: $font-color-text-rarity-rare;
+  }
+  &[data-rarity='epic'] {
+    color: $font-color-text-rarity-epic;
+  }
+  &[data-rarity='legendary'] {
+    color: $font-color-text-rarity-legendary;
+  }
+}
+
+[data-text-color="talent"] {
+  color: $font-color-text-talent-name;
+}
+
+.text-with-bg {
+  @extend .background-dark-semi-transparent;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.text-heading-with-bg-style-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  background-image: url("/client/assets/ui/backgroundboxwood2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 5px;
+  box-shadow: inset 0 0 10px 50px #00000082, 0 2px 6px 1px #000;
+}

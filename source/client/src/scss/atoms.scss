@@ -1,0 +1,739 @@
+@import 'includes/colors';
+
+.transparent-btn {
+  outline: none;
+  border:none;
+  background: none;
+}
+
+.currency-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-position: center center;
+  background-size: cover;
+
+  &[data-currency='currency1'] {
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><!-- Gold Coin Shape --><circle cx="50" cy="50" r="45" fill="gold" stroke="darkgoldenrod" stroke-width="5"/><!-- Shine Effect --><ellipse cx="50" cy="35" rx="20" ry="10" fill="lightyellow" opacity="0.6"/></svg>');
+  }
+
+  &[data-currency='currency2'] {
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><!-- Diamond Shape --><polygon points="50,5 95,50 50,95 5,50" fill="limegreen" stroke="darkgreen" stroke-width="5"/><!-- Shine Effect --><polygon points="50,10 85,50 50,90 15,50" fill="lightgreen" opacity="0.6"/></svg>');
+  }
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url('/client/assets/ui/sword.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(103deg) brightness(102%) contrast(107%);
+}
+
+.close-btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  color: transparent;
+  z-index: 10;
+  background-image: url('/client/assets/ui/closeiconwood.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+button {
+  &.button-main {
+    position: relative;
+    background: none;
+    box-shadow: 0 0 2px 1px #271b11;
+    padding: 0;
+
+    &:before {
+      content:'';
+      display: block;
+      position: absolute;
+      left:5px;
+      top:5px;
+      right:5px;
+      bottom:5px;
+      background-color: $bg-color-sand;
+    }
+
+    &:hover {
+      background: none;
+    }
+
+    .button-bg {
+      background: url('/client/assets/ui/buttonmain_middle.png');
+      background-size: auto 100%;
+      background-repeat: repeat;
+      position: absolute;
+      height: 100%;
+      left: 30px;
+      right: 44px;
+      top: 0;
+
+      &:hover {
+        background: url('/client/assets/ui/buttonmain_middle.png');
+        background-size: auto 100%;
+        background-repeat: repeat;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        background: url('/client/assets/ui/buttonmain_left.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        top: 0;
+        left: -30px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 44px;
+        height: 100%;
+        background: url('/client/assets/ui/buttonmain_right.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        top: 0;
+        right: -44px;
+      }
+    }
+
+    .button-text {
+      color: $font-color-btn-main;
+      position: relative;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 30px 10px 30px;
+    }
+  }
+
+  &.button-secondary-style1 {
+    position: relative;
+    box-shadow: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    min-width: 100px;
+
+    .button-bg {
+      /*box-shadow: inset 0 0 1px 3px #5e312887;*/
+      background: url('/client/assets/ui/buttonsecondary_style1.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0
+    }
+
+    .button-text {
+      color: #5e3128;
+      position: relative;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+
+  &.button-secondary-style2 {
+    position: relative;
+    box-shadow: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    min-width: 100px;
+    padding: 5px;
+
+    .button-bg {
+      background: url('/client/assets/ui/buttonsecondary_style2.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0
+    }
+
+    .button-text {
+      position: relative;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 5px 10px;
+      color: #ffe9b9;
+      text-shadow: 1px 1px 1px #311800;
+    }
+  }
+
+  /** Hold button */
+  &.hold-button {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+
+    &.holding {
+      opacity: 0.8;
+
+      .button-bg {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+
+    .button-bg {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        left: 10px;
+        width: 0%;
+        transition: width 1s ease;
+      }
+    }
+  }
+}
+
+.background-wrap-popover-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  .background-area {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: linear-gradient(135deg, #1a3910 0%, #0f1f08 100%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(26, 57, 16, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(15, 31, 8, 0.8) 0%, transparent 50%);
+      animation: backgroundPulse 15s ease-in-out infinite;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        repeating-linear-gradient(
+          45deg,
+          rgba(26, 57, 16, 0.1) 0px,
+          rgba(26, 57, 16, 0.1) 2px,
+          transparent 2px,
+          transparent 4px
+        );
+      animation: gridMove 20s linear infinite;
+    }
+  }
+
+  .background-corner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+  .background-top-left-corner {
+    transform: scale(-1, 1);
+    left: -10px;
+    top: -14px;
+  }
+  .background-top-right-corner {
+    top: -14px;
+    right: -10px;
+  }
+  .background-bottom-left-corner {
+    transform: scale(-1, -1);
+    left: -10px;
+    bottom: -14px;
+  }
+  .background-bottom-right-corner {
+    transform: scale(1, -1);
+    right: -10px;
+    bottom: -14px;
+  }
+  .background-border-horizontal {
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  .background-top-border {
+    top: 0;
+  }
+  .background-bottom-border {
+    bottom: 0;
+  }
+  .background-border-vertical {
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: 100% auto;
+  }
+  .background-left-border {
+    left: -6px;
+  }
+  .background-right-border {
+    right: -6px;
+  }
+}
+
+.background-wrap-popover-main2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  overflow: hidden;
+
+  .background-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: inset 0 0 100px 100px rgb(87 66 45 / 61%);
+    background-image: url(/client/assets/ui/texture_wood1.png);
+    background-size: 100% auto;
+    background-repeat: repeat;
+  }
+
+  .background-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: 100% calc(100% + 50px);
+    background-position: center center;
+    background-image: url('/client/assets/ui/popover-main2.png');
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background-image: url('/client/assets/ui/popover-main2.png');
+      background-size: 100% auto;
+      background-position: top center;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background-image: url('/client/assets/ui/popover-main2.png');
+      background-size: 100% auto;
+      background-position: bottom center;
+    }
+  }
+}
+
+.background-wrap-popover-main3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  overflow: hidden;
+
+  .background-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .background-border {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 50px;
+    right: 0;
+    background-repeat: repeat;
+    background-size: 100% calc(100% + 100px);
+    background-position: center center;
+    background-image: url('/client/assets/ui/popover-main3.png');
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -50px;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background-image: url('/client/assets/ui/popover-main3.png');
+      background-size: 100% auto;
+      background-position: top center;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background-image: url('/client/assets/ui/popover-main3.png');
+      background-size: 100% auto;
+      background-position: bottom center;
+    }
+  }
+}
+
+.background-wrap-popover-simple {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  .background-area {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+
+    background: url('/client/assets/ui/texture_wood1.png');
+    background-repeat: repeat;
+    background-size: 100% 300px;
+    box-shadow: inset 0 0 100px 100px rgb(36 20 10 / 62%);
+  }
+
+  .background-border-horizontal {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: url('/client/assets/ui/borderhorizontal_wood1.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: center center;
+    box-shadow: inset 0 0 3px 1px #000000a3;
+  }
+  .background-top-border {
+    top: 0;
+  }
+  .background-bottom-border {
+    bottom: 0;
+    transform: rotate(-180deg);
+  }
+  .background-border-vertical {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background: url('/client/assets/ui/bordervertical_wood1.png');
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: 100% auto;
+    box-shadow: inset 0 0 3px 1px #000000a3;
+  }
+  .background-left-border {
+    left: 0;
+  }
+  .background-right-border {
+    right: 0;
+    transform: rotate(-180deg);
+  }
+}
+
+.background-wrap-style-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  .background-area {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: url('/client/assets/ui/texture_wood3.png');
+    background-repeat: repeat;
+    box-shadow: inset 0 0 200px 200px rgb(9 31 5 / 90%);
+    background-size: 100% 100px;
+  }
+
+  .background-corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('/client/assets/ui/corner_style1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px 20px rgba(54, 35, 10, .3);
+  }
+  .background-top-left-corner {
+    left: -10px;
+    top: -9px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -21px;
+      bottom: -29px;
+      left: 9px;
+      right: -25px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('/client/assets/ui/corner_style1_additional.png');
+    }
+  }
+  .background-top-right-corner {
+    top: -9px;
+    right: -10px;
+  }
+  .background-bottom-left-corner {
+    transform: scale(-1, -1);
+    left: -10px;
+    bottom: -9px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -7px;
+      bottom: -21px;
+      left: -26px;
+      right: 3px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transform: scale(-1, 1) rotate(10deg);
+      background-image: url('/client/assets/ui/corner_style1_additional.png');
+    }
+  }
+  .background-bottom-right-corner {
+    transform: scale(1, -1);
+    right: -10px;
+    bottom: -14px;
+  }
+  .background-border-horizontal {
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    background-image: url('/client/assets/ui/borderhorizontal_style1.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: center center;
+    box-shadow: inset 0 0 10px 20px rgba(54, 35, 10, .5);
+  }
+  .background-top-border {
+    top: 0;
+  }
+  .background-bottom-border {
+    bottom: 0;
+  }
+  .background-border-vertical {
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    background-image: url('/client/assets/ui/bordervertical_style1.png');
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: 100% auto;
+    box-shadow: inset 0 0 10px 20px rgba(54, 35, 10, .5);
+  }
+  .background-left-border {
+    left: -6px;
+  }
+  .background-right-border {
+    right: -6px;
+  }
+}
+
+.background-wrap-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  .background-area {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: url('/client/assets/ui/texture_wood1.png');
+    background-repeat: repeat;
+    background-size: 100% 300px;
+    box-shadow: inset 0 0 100px 100px rgb(36 20 10 / 62%);
+  }
+
+  .background-border-horizontal {
+    position: absolute;
+    width: 100%;
+    height: 18px;
+    background: url('/client/assets/ui/borderhorizontal_wood2.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: center center;
+    box-shadow: inset 0 0 3px 1px #000000a3;
+  }
+  .background-top-border {
+    top: 0;
+  }
+  .background-bottom-border {
+    bottom: 0;
+    transform: rotate(-180deg);
+  }
+  .background-border-vertical {
+    position: absolute;
+    width: 18px;
+    height: 100%;
+    background: url('/client/assets/ui/bordervertical_wood2.png');
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: 100% auto;
+    box-shadow: inset 0 0 3px 1px #000000a3;
+  }
+  .background-left-border {
+    left: 0;
+  }
+  .background-right-border {
+    right: 0;
+    transform: rotate(-180deg);
+  }
+}
+
+.item-frame {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    top: 86%;
+    left: 30%;
+    box-shadow: 0 0 15px 23px #00000069;
+  }
+
+  &[data-rarity='common'] {
+    box-shadow: inset 0 0 10px 100px hsl(235deg 5.66% 58.43% / 70%);
+  }
+  &[data-rarity='good'] {
+    box-shadow: inset 0 0 10px 100px hsl(83.48deg 44.23% 40.78% / 70%)
+  }
+  &[data-rarity='rare'] {
+    box-shadow: inset 0 0 10px 100px hsl(243deg 69.94% 42.54% / 70%)
+  }
+  &[data-rarity='epic'] {
+    box-shadow: inset 0 0 1px 1px hsl(235deg 5.66% 58.43% / 70%);
+  }
+}
+.item-icon {
+  &[data-rarity='common'] {
+    box-shadow: inset 0 0 1px 1px hsl(235deg 5.66% 58.43% / 70%), 0 0 1px 1px hsl(235deg 5.66% 58.43% / 90%);
+  }
+  &[data-rarity='good'] {
+    box-shadow: inset 0 0 1px 1px hsl(83.48deg 44.23% 40.78% / 70%), 0 0 1px 1px hsl(82.99deg 45.53% 46.08% / 90%)
+  }
+  &[data-rarity='rare'] {
+    box-shadow: inset 0 0 1px 1px hsl(243deg 69.94% 42.54% / 70%), 0 0 1px 1px hsl(250deg 97% 42% / 90%)
+  }
+  &[data-rarity='epic'] {
+    box-shadow: inset 0 0 1px 1px hsl(235deg 5.66% 58.43% / 70%), 0 0 1px 1px hsl(235deg 5.66% 58.43% / 90%);
+  }
+}
+
+.divider {
+  &.divider-horizontal-simple {
+    width: 100%;
+    height: 5px;
+    background: url('/client/assets/ui/divider2.png');
+    background-size: 100% 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.input-default {
+  padding: 0 5px;
+  outline: none;
+  border: none;
+}
+
+.with-title-tooltip {
+  &:active:after {
+    content: attr(title);
+    padding: 5px;
+    border: 1px solid #000;
+    top: -5px;
+    left: 10%;
+    background-color: $bg-color-sand;
+    color: $font-color-btn-main;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+}
+
+.fs-hidden {
+  display: none !important;
+}

@@ -1,0 +1,52 @@
+<chatframes>
+    <div class="chat-type-selection js-chat-type-selection">
+        <div class="close-btn">X</div>
+        <div class="chat-type-selection-btn js-chat-type-selection-btn chat-type-system js-chat-type-system" data-type="system">
+            <span class="btn-title js-btn-title"></span>
+            <span class="has-new-messages js-has-new-messages"></span>
+        </div>
+        <div class="chat-type-selection-btn js-chat-type-selection-btn chat-type-personal js-chat-type-personal temporary-disabled" data-tooltip="TOOLTIP.TEMPORARY_DISABLED">
+            <span class="btn-title js-btn-title"></span>
+            <span class="has-new-messages js-has-new-messages"></span>
+        </div>
+        <div class="chat-type-selection-btn js-chat-type-selection-btn chat-type-global js-chat-type-global temporary-disabled" data-tooltip="TOOLTIP.TEMPORARY_DISABLED">
+            <span class="btn-title js-btn-title"></span>
+            <span class="has-new-messages js-has-new-messages"></span>
+        </div>
+        <div class="chat-type-selection-btn js-chat-type-selection-btn chat-type-guild js-chat-type-guild temporary-disabled" data-tooltip="TOOLTIP.TEMPORARY_DISABLED">
+            <span class="btn-title js-btn-title"></span>
+            <span class="has-new-messages js-has-new-messages"></span>
+        </div>
+    </div>
+    <div class="chat-container js-chat-container" data-type="system">
+        <div class="chat-container-heading js-chat-container-heading"></div>
+        <div class="close-btn">X</div>
+        <div class="chat-message js-chat-message chat-message-dummy js-chat-message-dummy">
+            <div class="chat-message-is-draft-badge js-chat-message-is-draft-badge"></div>
+            <div class="chat-message-author js-chat-message-author"></div>
+            <div class="chat-message-message js-chat-message-message"></div>
+            <div class="chat-message-actions js-chat-message-actions">
+                <button class="chat-message-actions-accept-draft js-chat-message-actions-accept-draft"></button>
+            </div>
+        </div>
+        <div class="chat-container-inner js-chat-container-inner"></div>
+        <div class="chat-form-wrapper js-chat-form-wrapper">
+            <div class="chat-form-heading js-chat-form-heading"></div>
+            <form class="chat-input-form js-chat-input-form">
+                <label class="chat-input-message-wrap js-chat-input-message-wrap">
+                    <textarea name="message" class="chat-input-message js-chat-input-message"></textarea>
+                </label>
+                <label class="chat-input-currency-wrap js-chat-input-currency-wrap">
+                    <span></span>
+                    <input name="currency1" type="text" class="chat-input-currency1 js-chat-input-currency1" />
+                    <input name="currency2" type="text" class="chat-input-currency2 js-chat-input-currency2" />
+                </label>
+                <label class="chat-input-items-wrap js-chat-input-items-wrap">
+                    <span></span>
+                    <input name="items" type="text" class="chat-input-items js-chat-input-items" />
+                </label>
+                <button type="submit" class="chat-form-submit js-chat-form-submit"></button>
+            </form>
+        </div>
+    </div>
+</chatframes>

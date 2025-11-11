@@ -1,0 +1,244 @@
+{
+  "frames": {
+    "0": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 70,
+        "y": 40,
+        "w": 278,
+        "h": 478
+      },
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 278,
+        "h": 478
+      }
+    },
+    "1": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 48,
+        "w": 311,
+        "h": 460
+      },
+      "frame": {
+        "x": 2,
+        "y": 482,
+        "w": 311,
+        "h": 460
+      }
+    },
+    "2": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 79,
+        "y": 44,
+        "w": 273,
+        "h": 475
+      },
+      "frame": {
+        "x": 282,
+        "y": 2,
+        "w": 273,
+        "h": 475
+      }
+    },
+    "3": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 45,
+        "w": 322,
+        "h": 466
+      },
+      "frame": {
+        "x": 315,
+        "y": 479,
+        "w": 322,
+        "h": 466
+      }
+    },
+    "4": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 42,
+        "w": 336,
+        "h": 474
+      },
+      "frame": {
+        "x": 557,
+        "y": 2,
+        "w": 336,
+        "h": 474
+      }
+    },
+    "5": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 42,
+        "w": 335,
+        "h": 468
+      },
+      "frame": {
+        "x": 639,
+        "y": 478,
+        "w": 335,
+        "h": 468
+      }
+    },
+    "6": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 45,
+        "w": 315,
+        "h": 474
+      },
+      "frame": {
+        "x": 895,
+        "y": 2,
+        "w": 315,
+        "h": 474
+      }
+    },
+    "7": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 70,
+        "y": 44,
+        "w": 282,
+        "h": 468
+      },
+      "frame": {
+        "x": 976,
+        "y": 478,
+        "w": 282,
+        "h": 468
+      }
+    },
+    "8": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 61,
+        "y": 40,
+        "w": 287,
+        "h": 472
+      },
+      "frame": {
+        "x": 1212,
+        "y": 2,
+        "w": 287,
+        "h": 472
+      }
+    },
+    "9": {
+      "duration": 150,
+      "rotated": false,
+      "trimmed": true,
+      "sourceSize": {
+        "w": 430,
+        "h": 519
+      },
+      "spriteSourceSize": {
+        "x": 72,
+        "y": 48,
+        "w": 284,
+        "h": 460
+      },
+      "frame": {
+        "x": 1260,
+        "y": 476,
+        "w": 284,
+        "h": 460
+      }
+    }
+  },
+  "meta": {
+    "app": "http://www.aseprite.org/",
+    "version": "1.2.25",
+    "image": "mappoint.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1546,
+      "h": 948
+    },
+    "scale": "1",
+    "frameTags": [
+      {
+        "name": "default",
+        "from": 0,
+        "to": 0,
+        "direction": "forward"
+      },
+      {
+        "name": "active",
+        "from": 0,
+        "to": 9,
+        "direction": "forward"
+      }
+    ],
+    "layers": [
+    ],
+    "slices": [
+    ]
+  }
+}
+
